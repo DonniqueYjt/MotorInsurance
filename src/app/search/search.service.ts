@@ -15,22 +15,22 @@ export class SearchService {
   constructor(private http: HttpClient) { }
 
   getManufacturer(): Observable<Manufacturer[]> {
-    return this.http.get<any>('../../assets/data/manufacture.json').pipe(
+    return this.http.get<any>('assets/data/manufacture.json').pipe(
       catchError((error: HttpErrorResponse) => this.handleError(error))
     )
   }
   getVehicles(): Observable<Vehicle[]> {
-    return this.http.get<any>('../../assets/data/vehicles.json').pipe(
+    return this.http.get<any>('assets/data/vehicles.json').pipe(
       catchError((error: HttpErrorResponse) => this.handleError(error))
     )
   }
   getVariants(): Observable<Variant[]> {
-    return this.http.get<any>('../../assets/data/variants.json').pipe(
+    return this.http.get<any>('assets/data/variants.json').pipe(
       catchError((error: HttpErrorResponse) => this.handleError(error))
     )
   }
   getRTOs(): Observable<RTO[]> {
-    return this.http.get<any>('../../assets/data/rtos.json').pipe(
+    return this.http.get<any>('assets/data/rtos.json').pipe(
       catchError((error: HttpErrorResponse) => this.handleError(error))
     )
   }
