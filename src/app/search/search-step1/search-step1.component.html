@@ -1,0 +1,199 @@
+<div class="row homebannermainrowdiv">
+  <div class="col-md-6">
+    <div class="formsearchwheretomaindiv">
+      <div class="col-md-12 contsteponemaindiv">
+        <h3>Save upto <b>80%</b> on car insurance</h3>
+        <p>Renew in <span>2 minutes</span></p>
+        <form>
+          <div class="row radiohomesearchsteponemainrow">
+            <div class="col-md-12 pd0 bottomgapsearchradiodiv">
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="pvtcar" name="carradiobannerone" class="custom-control-input" value="PVTCAR" [(ngModel)]="vehicleType">
+                <label class="custom-control-label" data-toggle="tooltip" data-placement="bottom" title="Custom"
+                  for="pvtcar">Pvt Car</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="gcvmaindiv" name="carradiobannerone" class="custom-control-input" value="GCV" [(ngModel)]="vehicleType">
+                <label class="custom-control-label" data-toggle="tooltip" data-placement="bottom" title="Custom"
+                  for="gcvmaindiv">GCV</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="PCVmaindiv" name="carradiobannerone" class="custom-control-input"
+                  value="COMMERCIAL" [(ngModel)]="vehicleType">
+                <label class="custom-control-label" data-toggle="tooltip" data-placement="bottom" title="Custom"
+                  for="PCVmaindiv">PCV</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="MiscVehiclemaindiv" name="carradiobannerone" class="custom-control-input"
+                  value="MISC" [(ngModel)]="vehicleType">
+                <label class="custom-control-label" data-toggle="tooltip" data-placement="bottom" title="Custom"
+                  for="MiscVehiclemaindiv">Misc Vehicle</label>
+              </div>
+
+              <div id="gcvmaindiv" class="showdivgcvmaindiv" style="display: none">
+                <div class="row maindropshowdivrow">
+                  <div class="col-md-12 maindropshowdivcols">
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="public" name="carradiodropshowdiv" class="custom-control-input">
+                      <label class="custom-control-label" data-toggle="tooltip" data-placement="bottom" title="Custom"
+                        for="public">Public</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="private" name="carradiodropshowdiv" class="custom-control-input">
+                      <label class="custom-control-label" data-toggle="tooltip" data-placement="bottom" title="Custom"
+                        for="private">Private</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="both" name="carradiodropshowdiv" class="custom-control-input">
+                      <label class="custom-control-label" data-toggle="tooltip" data-placement="bottom" title="Custom"
+                        for="both">Both</label>
+                    </div>
+                  </div>
+                  <div class="col-md-12 maindropshowdivcols">
+                    <label class="mylable">Usage Type</label>
+                    <select class="custom-select myinputdesign">
+                      <option>-Usage Type-</option>
+                      <option value="KFZOT">Others </option>
+                      <option value="KFZCS">Counter Signed </option>
+                      <option value="KFZEDU">Private Service Vehicles Educational Institution Bus
+                      </option>
+                      <option value="KFZLP">Local permit </option>
+                      <option value="KFZMCV">Contract Carriage Permit Maxi Cab Vehicle </option>
+                      <option value="KFZNP">National Permit</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div id="PCVmaindiv" class="showdivPCVmaindiv" style="display: none">
+                <div class="row maindropshowdivrow">
+                  <div class="col-md-12 maindropshowdivcols">
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="public" name="carradiodropshowdiv" class="custom-control-input">
+                      <label class="custom-control-label" data-toggle="tooltip" data-placement="bottom" title="Custom"
+                        for="public">Public</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="private" name="carradiodropshowdiv" class="custom-control-input">
+                      <label class="custom-control-label" data-toggle="tooltip" data-placement="bottom" title="Custom"
+                        for="private">Private</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="both" name="carradiodropshowdiv" class="custom-control-input">
+                      <label class="custom-control-label" data-toggle="tooltip" data-placement="bottom" title="Custom"
+                        for="both">Both</label>
+                    </div>
+                  </div>
+                  <div class="col-md-12 maindropshowdivcols">
+                    <label class="mylable">Usage Type</label>
+                    <select class="custom-select myinputdesign">
+                      <option>-Usage Type-</option>
+                      <option value="KFZOT">Others </option>
+                      <option value="KFZCS">Counter Signed </option>
+                      <option value="KFZEDU">Private Service Vehicles Educational Institution Bus
+                      </option>
+                      <option value="KFZLP">Local permit </option>
+                      <option value="KFZMCV">Contract Carriage Permit Maxi Cab Vehicle </option>
+                      <option value="KFZNP">National Permit</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div id="MiscVehiclemaindiv" class="showdivMiscVehiclemaindiv" style="display: none">
+                <div class="row maindropshowdivrow">
+                  <div class="col-md-12 maindropshowdivcols">
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="public" name="carradiodropshowdiv" class="custom-control-input">
+                      <label class="custom-control-label" data-toggle="tooltip" data-placement="bottom" title="Custom"
+                        for="public">Public</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="private" name="carradiodropshowdiv" class="custom-control-input">
+                      <label class="custom-control-label" data-toggle="tooltip" data-placement="bottom" title="Custom"
+                        for="private">Private</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="both" name="carradiodropshowdiv" class="custom-control-input">
+                      <label class="custom-control-label" data-toggle="tooltip" data-placement="bottom" title="Custom"
+                        for="both">Both</label>
+                    </div>
+                  </div>
+                  <div class="col-md-12 maindropshowdivcols">
+                    <label class="mylable">Usage Type</label>
+                    <select class="custom-select myinputdesign">
+                      <option>-Usage Type-</option>
+                      <option value="KFZOT">Others </option>
+                      <option value="KFZCS">Counter Signed </option>
+                      <option value="KFZEDU">Private Service Vehicles Educational Institution Bus
+                      </option>
+                      <option value="KFZLP">Local permit </option>
+                      <option value="KFZMCV">Contract Carriage Permit Maxi Cab Vehicle </option>
+                      <option value="KFZNP">National Permit</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-12 pd0">
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="Comprehensive" name="carradiobannertwo" class="custom-control-input"
+                  value="COMPREHENSIVE" [(ngModel)]="coverType">
+                <label class="custom-control-label" data-toggle="tooltip" data-placement="bottom" title="Custom"
+                  for="Comprehensive">Comprehensive</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="ThirdParty" name="carradiobannertwo" class="custom-control-input"
+                  value="THIRDPARTY" [(ngModel)]="coverType">
+                <label class="custom-control-label" data-toggle="tooltip" data-placement="bottom" title="Custom"
+                  for="ThirdParty">Third Party</label>
+              </div>
+            </div>
+          </div>
+          <div class="row d-none">
+            <div class="col-md-8 pd0">
+              <div class="form-group ">
+                <label class="inputlabelhomedivsearchstepone">Car Number</label>
+                <input type="text" class="form-control myinputdesign" id="carnumber"
+                  placeholder="Enter Car Number:  (eg. DL-10-CB-1234)">
+              </div>
+            </div>
+            <div class="col-md-4 pd0">
+              <button type="button" class="btn btn-primary btnsearchhome" data-toggle="tooltip" data-placement="bottom"
+                title="Continue">Continue <i class="fa fa-angle-right"></i></button>
+            </div>
+          </div>
+        </form>
+        <h5 class="d-none"><span>or</span></h5>
+        <h4><a data-toggle="tooltip" data-placement="bottom" title="Proceed without car number"
+            (click)="moveToStep2()">Proceed without
+            car number <i class="fa fa-arrow-right"></i></a></h4>
+        <h6><a href="#" data-toggle="tooltip" data-placement="bottom" title="Click Here">Brand new car? Click here</a>
+        </h6>
+      </div>
+
+    </div>
+  </div>
+  <div class="col-md-1"></div>
+  <div class="col-md-4 leftconthomebanner">
+    <!-- <img src="assets/img/banner1.jpg" alt="" /> -->
+    <div class="col-12 col-md-12">
+      <div class="slider leftsidebannerslider">
+        <div>
+          <img src="assets/img/ad1.jpg" alt="" />
+        </div>
+        <div>
+          <img src="assets/img/ad2.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <marquee class="marqueebannerhome">
+        <p>Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem
+          ipsum dolor!</p>
+      </marquee>
+    </div>
+  </div>
+  <div class="col-md-1"></div>
+</div>

@@ -1,0 +1,199 @@
+﻿.menutopnav {
+    /*margin-bottom: 0;
+    margin-top: 10px;*/
+    text-align: right;
+}
+
+.menutopnav li {
+    list-style: none;
+    display   : inline-block;
+}
+
+.menutopnav li a {
+    color    : #002663;
+    padding  : 0 10px;
+    font-size: 17px;
+}
+
+.menutopnav li a:hover {
+    color: #002663;
+}
+
+.firstnav {
+    border-right: #fff solid 1px;
+}
+
+.menutopnav li a:hover {
+    text-decoration: none;
+}
+
+.menutopright {
+    position  : absolute;
+    right     : 0;
+    top       : 0;
+    width     : 115px;
+    text-align: center;
+}
+
+.lastbtnmenu {
+    background-color: #000000;
+    padding         : 12px 15px 15px !important;
+    color           : #fff !important;
+    display         : block;
+    line-height     : 17px;
+    font-weight     : 600;
+    text-transform  : uppercase;
+    font-size       : 17px;
+    letter-spacing  : 1px;
+}
+
+.logotopleft {
+    position  : absolute;
+    left      : 0;
+    top       : 0;
+    width     : 150px;
+    text-align: center;
+}
+
+.logobtnleft {
+    background-color: #000000;
+    padding         : 8px 15px 8px !important;
+    color           : #fff !important;
+    display         : block;
+}
+
+.logobtnleft img {
+    width: 100%;
+}
+
+.lastbtnmenu:hover {
+    background-color: rgba(193, 155, 118, 1);
+}
+
+.lastbtnmenu img {
+    width        : 40%;
+    margin-bottom: 7px;
+}
+
+.menutopnav_inner {
+    margin-bottom: 0;
+    margin-top   : 15px;
+    padding-left : 0;
+}
+
+.menutopnav_inner li {
+    list-style: none;
+    display   : inline-block;
+}
+
+.menutopnav_inner li a {
+    color  : #000;
+    padding: 0 10px;
+}
+
+.menutopnav_inner li a:hover {
+    text-decoration: none;
+}
+
+@media (max-width:1024px) {}
+
+@media only screen and (min-width:481px) and (max-width:992px) {
+    .logobtnleft {
+        padding: 3px 4px 5px !important;
+    }
+
+    .lastbtnmenu {
+        padding: 5px 15px 15px !important;
+    }
+
+    .menutopnav {
+        padding-left : 60px;
+        padding-right: 55px;
+        margin-top   : 0px;
+    }
+
+    .menutopnav li a {
+        padding  : 0 4px;
+        font-size: 14px;
+    }
+
+    .logotopleft {
+        width: 98px !important;
+    }
+}
+
+@media only screen and (min-width:257px) and (max-width:480px) {
+    .menutopnav li a {
+        font-size: 16px;
+        padding  : 0 3px;
+    }
+
+    .menutopnav {
+        margin-bottom: 0;
+        margin-top   : 5px;
+    }
+
+    .menutopright {
+        width : 65px;
+        height: 100%;
+    }
+
+    .lastbtnmenu {
+        padding       : 0px 5px 10px !important;
+        line-height   : 15px;
+        font-size     : 16px;
+        letter-spacing: 1px;
+        height        : 100%;
+    }
+
+    .lastbtnmenu img {
+        display: none;
+    }
+
+    .mainsearchdiv {
+        width : 100%;
+        margin: 0 0%;
+    }
+
+    .logotopleft {
+        width : 70px;
+        height: 100%;
+    }
+
+    .logobtnleft {
+        height : 100%;
+        padding: 8px 5px 8px !important;
+    }
+
+
+}
+
+.input-group-prepend {
+    background-color: #e9ecef;
+    border          : 1px solid #ced4da;
+}
+
+.input-group-text {
+    border: none;
+}
+
+.auto-complete {
+    position        : absolute;
+    width           : 100%;
+    background-color: white;
+    z-index         : 9999;
+    top             : 38px;
+    box-shadow      : 0px 0px 9px 2px #eaeaea;
+    max-height: 20rem;
+    overflow: auto;
+}
+
+.auto-complete .list-group-item {
+    border: none;
+}
+
+.auto-complete .list-group-item:hover {
+    background-color: #007bff;
+    color           : white;
+    cursor          : pointer;
+}

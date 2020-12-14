@@ -28,9 +28,28 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/adminlte.min.css",
+              "src/assets/css/style.css",
+              "src/assets/css/font-awesome.min.css",
+              "src/assets/css/myStyle.css",
+              "src/assets/css/menu.css",
+              "src/assets/css/imagehover.css",
+              "src/assets/css/datepicker-style.css",
+              "node_modules/slick-carousel/slick/slick.scss",
+              "node_modules/slick-carousel/slick/slick-theme.scss",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery-3.3.1.min.js",
+              "src/assets/js/adminlte.min.js",
+              "src/assets/js/jquery-ui-datepicker.js",
+              "src/assets/js/popper.min.js",
+              "src/assets/js/bootstrap.min.js",
+              "src/assets/js/signinpass.js",
+              "node_modules/slick-carousel/slick/slick.min.js",
+              "src/assets/js/slick.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -66,7 +85,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "MotorInsurance:build"
+            "browserTarget": "MotorInsurance:build",
+            "proxyConfig": "src/proxy.conf.json"
           },
           "configurations": {
             "production": {
@@ -123,6 +143,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "MotorInsurance"
 }

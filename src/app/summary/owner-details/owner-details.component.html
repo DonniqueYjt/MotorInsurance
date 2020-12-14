@@ -1,0 +1,127 @@
+<h3 class="headingbookingtabmaincontdiv"><span>Owner Details</span></h3>
+<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+  <form [formGroup]="visitorForm">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 listsummeryformmaindivleftside">
+        <div class="row mg0">
+          <div class="col-12 col-sm-2 col-md-2 col-lg-2 pd5">
+            <label class="mylable">Title</label>
+            <select class="custom-select myinputdesign" formControlName="Title">
+              <option selected>Title</option>
+              <option value="Mr">Mr</option>
+              <option value="Mrs">Mrs</option>
+              <option value="Ms">Ms</option>
+            </select>
+          </div>
+          <div class="col-12 col-sm-5 col-md-5 col-lg-5 pd5">
+            <label class="mylable">First Name</label>
+            <input type="text" class="form-control myinputdesign" id="name" placeholder="First Name"
+              formControlName="CustomerName">
+          </div>
+          <div class="col-12 col-sm-5 col-md-5 col-lg-5 pd5">
+            <label class="mylable">Last Name</label>
+            <input type="text" class="form-control myinputdesign" id="name" placeholder="Last Name"
+              formControlName="LastName">
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 listsummeryformmaindivleftside">
+        <div class="row mg0">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+            <label class="mylable">Mobile Number</label>
+            <input type="number" class="form-control myinputdesign" id="number" placeholder="Mobile Number"
+              formControlName="MobileNo">
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+            <label class="mylable">Email Address</label>
+            <input type="email" class="form-control myinputdesign" id="email" placeholder="Email Address"
+              formControlName="EmailId">
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 listsummeryformmaindivleftside">
+        <div class="row mg0">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+            <label class="mylable">Gender</label>
+            <div class="radio-group">
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="male" name="Gender" class="custom-control-input" formControlName="Gender"
+                  value="M">
+                <label class="custom-control-label" data-toggle="tooltip" data-placement="bottom" title="Custom"
+                  for="male">Male</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="female" name="Gender" class="custom-control-input" formControlName="Gender"
+                  value="F">
+                <label class="custom-control-label" data-toggle="tooltip" data-placement="bottom" title="Custom"
+                  for="female">Female</label>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+            <label class="mylable">Marital Status</label>
+            <div class="radio-group">
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="mar" name="MaritalStatus" class="custom-control-input"
+                  formControlName="MaritalStatus" value="M">
+                <label class="custom-control-label" data-toggle="tooltip" data-placement="bottom" title="Custom"
+                  for="mar">Married</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="single" name="MaritalStatus" class="custom-control-input"
+                  formControlName="MaritalStatus" value="S">
+                <label class="custom-control-label" data-toggle="tooltip" data-placement="bottom" title="Custom"
+                  for="single">Un Married</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 listsummeryformmaindivleftside">
+        <div class="row mg0">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+            <label class="mylable">Date of Birth</label>
+            <input type="text" class="form-control myinputdesign" id="dob" placeholder="Date of Birth"
+              formControlName="DOB">
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+            <label class="mylable">Occupation</label>
+            <input type="text" class="form-control myinputdesign" id="occupation" placeholder="Occupation"
+              formControlName="Occupation">
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 listsummeryformmaindivleftside">
+        <div class="row mg0">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+            <label class="mylable">This Vehicle Belongs To</label>
+            <div class="radio-group">
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="ind" name="VehicleOwnedBy" class="custom-control-input"
+                  formControlName="VehicleOwnedBy" value="INDIVIDUAL">
+                <label class="custom-control-label" data-toggle="tooltip" data-placement="bottom" title="Custom"
+                  for="ind">Individual</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="com" name="VehicleOwnedBy" class="custom-control-input"
+                  formControlName="VehicleOwnedBy" value="ORGANISATION">
+                <label class="custom-control-label" data-toggle="tooltip" data-placement="bottom" title="Custom"
+                  for="com">Company</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 listsummeryformmaindivleftside">
+        <div class="row mg0">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 pd5">
+            <div class="form-group buttongrupsteps">
+              <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="bottom"
+                title="Continue" (click)="saveVisitor()">Continue</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

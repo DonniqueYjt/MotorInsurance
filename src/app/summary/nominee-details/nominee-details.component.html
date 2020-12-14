@@ -1,0 +1,60 @@
+<h3 class="headingbookingtabmaincontdiv"><span>Nominee Details</span></h3>
+<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+  <form [formGroup]="nomineeForm">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 listsummeryformmaindivleftside">
+        <div class="row mg0">
+          <div class="col-12 col-sm-3 col-md-3 col-lg-3 pd5">
+            <label class="mylable">Select Title</label>
+            <select class="custom-select myinputdesign" formControlName="Title">
+              <option selected>Title</option>
+              <option value="1">Mr</option>
+              <option value="2">Mrs</option>
+              <option value="3">Ms</option>
+            </select>
+          </div>
+          <div class="col-12 col-sm-9 col-md-9 col-lg-9 pd5">
+            <label class="mylable">Nominee</label>
+            <input type="text" class="form-control myinputdesign" id="name" placeholder="Name of Nominee"
+              formControlName="NomineeName">
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 listsummeryformmaindivleftside">
+        <div class="row mg0">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+            <label class="mylable">Nominee Relation</label>
+            <select class="custom-select myinputdesign" formControlName="NomineeRelationship">
+              <option selected>Select Nominee Relation</option>
+              <option value="">Spouse</option>
+              <option value="">Son</option>
+              <option value="">Daughter</option>
+            </select>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+            <label class="mylable">Nominee Age</label>
+            <select class="custom-select myinputdesign" formControlName="NomineeAge">
+              <option value="" selected="" disabled="">Select
+                Nominee
+                Age</option>
+              <option value="">18</option>
+              <option value="">19</option>
+              <option value="">20</option>
+              <option value="">21</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 listsummeryformmaindivleftside">
+        <div class="row mg0">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 pd5">
+            <div class="form-group buttongrupsteps">
+              <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="bottom"
+                title="Continue" (click)="saveNominee()">Continue</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

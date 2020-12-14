@@ -1,0 +1,212 @@
+<div class="row mainrowsubheader">
+    <div class="container">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="row">
+                <div class="col-12 col-sm-5 col-md-5 col-lg-4 headingcontsubheader">
+                    <h3>{{searchObject.manufacturer.Manufacturername}} {{searchObject.model.VehicleName}}
+                        {{searchObject.fuelType}} ({{searchObject.variant.VehicleCC}} cc)</h3>
+                    <ul>
+                        <li>{{searchObject.vehicleType}} <span></span></li>
+                        <li>{{searchObject.manufacturerYear}} <span></span></li>
+                        <li>{{searchObject.fuelType}} <span></span></li>
+                        <li>{{searchObject.rto.RTOCode}} ({{searchObject.rto.RTOName}})</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-5 col-md-5 col-lg-4 mainsubheadercenterdiv">
+                    <div class="row">
+                        <div class="col-8 col-sm-8 col-md-8 col-lg-8 contactemailsubhead d-flex flex-column">
+                            <div>
+                                <p style="display:inline-block">Mobile No:</p><span>
+                                    {{searchObject.mobile}}</span><input type="text" style="display:none"
+                                    class="form-control form-control-sm" placeholder="Mobile Number">
+                            </div>
+                            <div>
+                                <p style="display:inline-block">Email ID:</p><span>{{searchObject.email}}</span><input
+                                    type="text" style="display:none" class="form-control form-control-sm"
+                                    placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="col-4 col-sm-4 col-md-4 col-lg-4 contactemailsubhead">
+                            <p><a href="#" onclick="makeEditable()" data-toggle="tooltip" data-placement="bottom"
+                                    title="Edit">Edit</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row maininnerpagebottomgap">
+    <div class="container">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="row">
+
+                <div class="col-12 col-sm-8 col-md-8 col-lg-8">
+
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <h5>Confirm your details</h5>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 leftsidesummerydatamaindiv">
+                        <div class="row">
+                            <div class="col-12 mb-3">
+                                <div class="nav flex-row nav-pills" id="v-pills-tab" role="tablist"
+                                    aria-orientation="horizontal">
+                                    <a class="nav-link" id="OwnerDetails-tab" aria-selected="true"
+                                        [routerLink]="['/summary/owner']" [queryParams]="{ enquiryId: searchEnquiryId }"
+                                        routerLinkActive="active">Owner Details</a>
+                                    <a class="nav-link" id="AddressDetails-tab" aria-selected="true"
+                                        [routerLink]="['/summary/address']"
+                                        [queryParams]="{ enquiryId: searchEnquiryId }" routerLinkActive="active">Address
+                                        Details</a>
+                                    <a class="nav-link" id="NomineeDetails-tab" aria-selected="false"
+                                        [routerLink]="['/summary/nominee']"
+                                        [queryParams]="{ enquiryId: searchEnquiryId }" routerLinkActive="active">Nominee
+                                        Details</a>
+                                    <a class="nav-link" id="VehicleDetails-tab" aria-selected="false"
+                                        [routerLink]="['/summary/vehicle']"
+                                        [queryParams]="{ enquiryId: searchEnquiryId }" routerLinkActive="active">Vehicle
+                                        Details</a>
+                                    <a class="nav-link" id="Proposal-tab" aria-selected="false"
+                                        [routerLink]="['/summary/proposal']"
+                                        [queryParams]="{ enquiryId: searchEnquiryId }"
+                                        routerLinkActive="active">Proposal</a>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <router-outlet></router-outlet>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <h5>Your Plan Summary</h5>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 rightsidesummerymaindiv">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="row">
+                                <div class="col-3 col-sm-3 col-md-3 col-lg-3 imgcontrightsidesummery">
+                                    <img src="img/logo-list.png" alt="" />
+                                </div>
+                                <div class="col-4 col-sm-4 col-md-4 col-lg-4 summerylistrightsideidv">
+                                    <h3>IDV</h3>
+                                    <p>Plan Type</p>
+                                </div>
+                                <div class="col-5 col-sm-5 col-md-5 col-lg-5 rightsidesummerylist">
+                                    <h3><i class="fa fa-inr"></i> {{selectedQuote.SupplierIdv}}</h3>
+                                    <p>{{selectedQuote.PlanName}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 importantplanmaindivright">
+                            <p data-toggle="collapse" href="#importantplan" role="button" aria-expanded="false"
+                                aria-controls="importantplan">Plan Features <i class="fa fa-angle-down"></i></p>
+                            <div class="collapse" id="importantplan">
+                                <div class="contdivimportantplan">
+                                    <h5>Important Plan Features</h5>
+                                    <h6><i class="fa fa-circle"></i> 1 Year Own Damage + 3 Years Third Party</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="row">
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 summeryrightpricecont">
+                                    <p>Premium Amount</p>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 summeryrightpricecont">
+                                    <h5><i class="fa fa-inr"></i> {{selectedQuote.PackagePremium}}</h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 summeryrightpricecont">
+                                    <p>Service Tax/GST</p>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 summeryrightpricecont">
+                                    <h5><i class="fa fa-inr"></i> {{selectedQuote.ServiceTax}}</h5>
+                                </div>
+                            </div>
+                            <div class="row summeryfinalpricecontrightside">
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 summeryrightpricecont">
+                                    <h4>You'll Pay</h4>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 summeryrightpricecont">
+                                    <h3><i class="fa fa-inr"></i> {{selectedQuote.FinalPremium}}</h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="custom-control custom-checkbox" data-toggle="tooltip"
+                                        data-placement="bottom" title="Agree Terms and Conditions">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label labelrightsidecontcheck" for="customCheck1">I
+                                            agree to the <a href="#">Terms & Conditions</a> and confirm that this car is
+                                            not a commercial vehicle and my previous policy is a comprehensive/package
+                                            policy & I confirm that my vehicle has a valid PUC certificate.</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <button type="button" class="btn btn-primary btnsummeryrightside"
+                                        data-toggle="tooltip" data-placement="bottom" title="Pay Securely"><i
+                                            class="fa fa-lock"></i> Pay Securely</button>
+                                </div>
+                                <div
+                                    class="col-12 col-sm-12 col-md-12 col-lg-12 sideleftbox_booking pd0leftright offers">
+                                    <h2>OFFERS</h2>
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="customRadio1" name="customRadio"
+                                                class="custom-control-input">
+                                            <label class="custom-control-label labeloffer" for="customRadio1">CITISUPER
+                                            </label>
+                                            <span class="removetxt" hidden><a href="#">Remove</a></span>
+                                        </div>
+                                        <p class="bottomdarkfont discount-text">
+                                            Use CITISUPER to get INR 2332 cashback to card. Valid on CITI Debit &amp;
+                                            Credit Cards. Hurry offer valid for today.
+                                            <a href="#">Know More</a>
+                                        </p>
+                                        <p class="bottomdarkfont discount-applied" hidden>
+                                            Deal Code Applied. INR 2332 cashback to card will be processed as per
+                                            T&amp;C
+                                            <a href="#">View Terms &amp; Conditions</a>
+                                        </p>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="customRadio2" name="customRadio"
+                                                class="custom-control-input">
+                                            <label class="custom-control-label labeloffer"
+                                                for="customRadio2">FLYNEW</label>
+                                            <span class="removetxt" hidden><a href="#">Remove</a></span>
+                                        </div>
+                                        <p class="bottomdarkfont discount-text">
+                                            Use this to get INR 1200 Cashback to Wallet
+                                            <a href="#">Know More</a>
+                                        </p>
+                                        <p class="bottomdarkfont discount-applied" hidden>
+                                            Deal Code Applied. INR 1200 Cashback to Wallet will be processed as per
+                                            T&amp;C
+                                            <a href="#">View Terms &amp; Conditions</a>
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

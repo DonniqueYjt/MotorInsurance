@@ -1,0 +1,84 @@
+<h3 class="headingbookingtabmaincontdiv"><span>Vehicle Details</span></h3>
+<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+  <form [formGroup]="vehicleForm">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 listsummeryformmaindivleftside">
+        <div class="row mg0">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+            <label class="mylable">Previous Insurer</label>
+            <select class="custom-select myinputdesign" formControlName="PreviousInsurerId">
+              <option value="" selected="" disabled="">Previous
+                Insurer</option>
+              <option value="">New India Assurance</option>
+              <option value="">Kotak General Insurance</option>
+            </select>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+            <label class="mylable">Previous Policy Number</label>
+            <input type="text" class="form-control myinputdesign" id="name" placeholder="Policy Number"
+              formControlName="PreviousPolicyNumber">
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 listsummeryformmaindivleftside">
+        <div class="row mg0">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+            <label class="mylable">Registered Date</label>
+            <input type="text" class="form-control myinputdesign" id="number" placeholder="Registered Date">
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+            <label class="mylable">Registration Number</label>
+            <input type="text" class="form-control myinputdesign" id="email" placeholder="Registration Number"
+              formControlName="RegistrationNumber">
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 listsummeryformmaindivleftside">
+        <div class="row mg0">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+            <label class="mylable">Engine Number</label>
+            <input type="text" class="form-control myinputdesign" id="registrationaddress" placeholder="Engine Number"
+              formControlName="EngineNumber">
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+            <label class="mylable">Chasis Number</label>
+            <input type="text" class="form-control myinputdesign" id="pincode" placeholder="Chasis Number"
+              formControlName="ChasisNumber">
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 listsummeryformmaindivleftside">
+        <div class="row mg0">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+            <label class="mylable">Car Financed</label>
+            <select class="custom-select myinputdesign" formControlName="IsUnderLoan">
+              <option value="" selected="" disabled="">Is your Car
+                Financed</option>
+              <option value="y">Yes</option>
+              <option value="n">No</option>
+            </select>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+            <label class="mylable">Car Financer Name</label>
+            <select class="custom-select myinputdesign" formControlName="NomineeAge">
+              <option value="" selected="" disabled="">Is your Car
+                Financed</option>
+              <option value="y">Yes</option>
+              <option value="n">No</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 listsummeryformmaindivleftside">
+        <div class="row mg0">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 pd5">
+            <div class="form-group buttongrupsteps">
+              <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="bottom"
+                title="Continue" (click)="saveVehicle()">Continue</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

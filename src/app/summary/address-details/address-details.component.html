@@ -1,0 +1,62 @@
+
+  <h3 class="headingbookingtabmaincontdiv"><span>Address Details</span></h3>
+  <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+    <form [formGroup]="visitorForm">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 listsummeryformmaindivleftside">
+          <div class="row mg0">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+              <label class="mylable">PAN No</label>
+              <input type="text" class="form-control myinputdesign" id="name" placeholder="Pan No"
+                formControlName="PanNumber">
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+              <label class="mylable">Aadhar No</label>
+              <input type="text" class="form-control myinputdesign" id="name" placeholder="Aadhar No"
+                formControlName="AadharNo">
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+              <label class="mylable">Address Line 1</label>
+              <input type="text" class="form-control myinputdesign" id="name" placeholder="Address Line 1"
+                formControlName="Address1">
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+              <label class="mylable">Address Line 2</label>
+              <input type="text" class="form-control myinputdesign" id="name" placeholder="Address Line 2"
+                formControlName="Address2">
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+              <label class="mylable">Address Line 3</label>
+              <input type="text" class="form-control myinputdesign" id="name" placeholder="Address Line 3"
+                formControlName="Address3">
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+              <label class="mylable">State</label>
+              <input type="text" class="form-control myinputdesign" id="name" placeholder="State"
+                formControlName="StateId">
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+              <label class="mylable">City</label>
+              <input type="text" class="form-control myinputdesign" id="name" placeholder="City"
+                formControlName="CityId">
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+              <label class="mylable">Pincode</label>
+              <input type="text" class="form-control myinputdesign" id="name" placeholder="Pincode"
+                formControlName="PostCode">
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 listsummeryformmaindivleftside">
+          <div class="row mg0">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 pd5">
+              <div class="form-group buttongrupsteps">
+                <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="bottom"
+                  title="Continue" (click)="saveVisitor()">Continue</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>

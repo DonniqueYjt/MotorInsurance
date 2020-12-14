@@ -1,0 +1,173 @@
+﻿.overlay {
+       height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color:rgb(255, 255, 255);
+    overflow-y: hidden;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+      /* padding: 8px; */
+    text-decoration: none;
+    font-size: 36px;
+    color: #000;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #ddd;
+}
+
+.overlay .closebtn {
+   
+}
+.closefont
+{
+  font-size: 16px;
+    position: relative;
+    top: -5px;
+    }
+.logomenu img
+{
+    width:25%;
+    }
+.menufullwidthrow
+{
+    margin-top:15px;
+    }
+.linkmenumainrow
+{
+       margin-top: 30px;
+    height: 522px;
+    overflow-y: scroll !important; 
+    }  
+.menubarlink{    
+    padding-left: 13px;
+    border-left: #dfc3ff solid 1px;
+    margin-bottom: 35px;
+}
+
+.menubarlink li
+{
+    list-style: disc;
+    color: #002663;
+    } 
+.menubarlink li a
+{
+      color: #000;
+    font-size: 14px;
+    /* border-bottom: 1px solid #ddd; */
+    padding-bottom: 2px;
+    padding-top: 3px;
+    text-transform: uppercase;
+    } 
+.headmenutxtfull{
+      font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 10px;
+    min-height: 40px;  
+}
+.coloryellowmenuhead{
+    color: #ffc107;
+}
+.colorredmenuhead{
+    color: #dc3545;
+}
+.colorbluemenuhead{
+    color: #1976da;
+}
+.colorpurplemenuhead{
+    color: #ad0bd4;
+}
+.colorgreenmenuhead{
+    color: #28a745;
+}
+.colorskybluemenuhead{
+    color: #90c6ff;
+}
+.colormargantamenuhead{
+    color: #e132ff;
+}
+.colorpinkmenuhead{
+    color: #e200ba;
+}
+.lastmenu
+{
+    border-bottom:none !important;
+    }  
+.menubarlink li img
+{
+    width:100%;
+    margin-top:15px;
+    }   
+.followuslist li a{
+       border-bottom: none;
+    font-size: 25px;
+    padding-bottom: 0px;
+} 
+.facebbok{color:#3b5999 !important; }
+.twitter{color: #55acee !important; }
+.linkedin{color: #0077B5 !important; }
+.google_plus{color: #dd4b39 !important; }
+.instagram{color: #e4405f !important; }
+          
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+@media only screen and (min-width:500px) and (max-width:997px)
+{
+
+}
+
+@media only screen and (min-width:257px) and (max-width:499px)
+{
+.linkmenumainrow {
+    margin-top: 15px;
+    height: 100%;}  
+ .menubarlink li img {
+    width: 60%;}
+    .menufullwidthrow {
+    margin-top: 10px;
+}
+    .logomenu img {
+    width: 45%;
+}
+    .menubarlink li {
+        text-align: left;
+    }
+    .menubarlink li a {
+    font-size: 17px;
+    padding-bottom: 6px;
+    padding-top: 6px;
+}
+    .followuslist li{
+       display: inline-block;
+      margin-left: 10px;
+    }
+    .overlay {      
+    overflow-y: scroll;
+    }
+}

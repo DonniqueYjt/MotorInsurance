@@ -1,0 +1,37 @@
+.ui-widget.ui-widget-content {
+    border: 1px solid #dedede;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+    border: 1px solid #eaeaea;
+    background: #ffffff;    
+    color: #444444;
+}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+    border: 1px solid #002663;
+    background: #002663;
+    color: #ffffff;
+    font-weight: 600;
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+    border: 1px solid #858486;
+    background: #858486;
+    font-weight: 600;
+    color: #ffffff;
+}
+.ui-datepicker td span, .ui-datepicker td a {   
+    padding: 7px 5px;
+    font-size: 13px;
+}
+.ui-widget-header {
+    border: 1px solid #ffffff;
+    background: #76aad8;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.ui-icon-circle-triangle-e {
+    background-position: -30px 0px;
+}
+.ui-icon-circle-triangle-w {
+    background-position: -95px 0px;
+}

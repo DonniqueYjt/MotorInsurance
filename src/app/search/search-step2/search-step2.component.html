@@ -1,0 +1,325 @@
+<div class="row homebannermainrowdiv">
+    <div class="col-md-6">
+        <form [formGroup]="searchForm">
+            <!-- Car Manufacturer -->
+            <div id="homestep1" class="formsearchwheretomaindiv" *ngIf="isShowManufacture">
+                <div class="col-md-12">
+                    <h3 class="headingsearchhome innerstepheadtag">
+                        <!-- <span class="close-btn-prev"><i class="fa fa-chevron-left"></i></span> -->
+                        Select Car Manufacturer
+                        <span class="close-btn-next" (click)="goNext(2)"><i class="fa fa-chevron-right"
+                                data-toggle="tooltip" data-placement="bottom" title="Navigate to Car Model"></i></span>
+                    </h3>
+                </div>
+                <div class="col-md-12 maincontainerdivstepscont">
+                    <div class="col-md-12 searchmaindivcontsteps">
+
+                        <div class="input-group flex-nowrap">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="addon-wrapping"><i class="fa fa-search"></i></span>
+                            </div>
+                            <input type="text" class="form-control myinputdesign" placeholder="Search manufacturer"
+                                data-toggle="tooltip" data-placement="bottom" title="Search Manufacturer"
+                                formControlName="searchTextManufacture">
+                        </div>
+                    </div>
+                    <div class="col-md-12 stepscarlogolistdiv">
+                        <ul>
+                            <li
+                                *ngFor="let manufacturer of manufacturerList | searchFilter: searchForm.value.searchTextManufacture:'manufacturer'">
+                                <label>
+                                    <input type="radio" name="MakeID" [value]="manufacturer.ManufacturerID"
+                                        formControlName="MakeID" (change)="goNext(2,$event,manufacturer)">
+                                    <a data-toggle="tooltip" data-placement="bottom" class="radio"
+                                        [attr.title]="manufacturer.Manufacturername">
+                                        <img class="carlogo1img" src="assets/img/car-logo/car-logo1.png" alt="" />
+                                        <p>{{manufacturer.Manufacturername}}</p>
+                                    </a>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-12 btnothersstepsoutline">
+                        <button type="button" class="btn btn-outline-secondary" data-toggle="tooltip"
+                            data-placement="bottom" title="Others">Others</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Car Model -->
+            <div id="homestep2" class="formsearchwheretomaindiv" *ngIf="isShowModel">
+                <div class="col-md-12">
+                    <h3 class="headingsearchhome innerstepheadtag">
+                        <span class="close-btn-prev" (click)="goNext(1)"><i class="fa fa-chevron-left"
+                                data-toggle="tooltip" data-placement="bottom"
+                                title="Navigate to Car Manufacturer"></i></span>
+                        Select Car Model
+                        <span class="close-btn-next" (click)="goNext(3)"><i class="fa fa-chevron-right"
+                                data-toggle="tooltip" data-placement="bottom"
+                                title="Navidate to Car Fuel type"></i></span>
+                    </h3>
+                </div>
+                <div class="col-md-12 maincontainerdivstepscont">
+                    <div class="col-md-12 searchmaindivcontsteps">
+                        <div class="input-group flex-nowrap">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="addon-wrapping"><i class="fa fa-search"></i></span>
+                            </div>
+                            <input type="text" class="form-control myinputdesign" placeholder="Search MARUTI model"
+                                data-toggle="tooltip" data-placement="bottom" title="Search car model"
+                                formControlName="searchTextModel">
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 stepscarfueltypelistdiv autoheightstepsmin">
+                        <ul>
+                            <li
+                                *ngFor="let vehicle of vehicleList | searchFilter: searchForm.value.searchTextModel:'model'">
+                                <label>
+                                    <input type="radio" name="ModelId" [value]="vehicle.VehicleID"
+                                        formControlName="ModelId" (change)="goNext(3,$event,vehicle)">
+                                    <a data-toggle="tooltip" data-placement="bottom"
+                                        title="ALTO">{{vehicle.VehicleName}} <span><i
+                                                class="fa fa-angle-right"></i></span></a>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Car Fuel Type -->
+            <div id="homestep3" class="formsearchwheretomaindiv" *ngIf="isShowFuelType">
+                <div class="col-md-12">
+                    <h3 class="headingsearchhome innerstepheadtag">
+                        <span class="close-btn-prev" (click)="goNext(2)"><i class="fa fa-chevron-left"
+                                data-toggle="tooltip" data-placement="bottom" title="Navigate to Car Model"></i></span>
+                        Select Car Fuel Type
+                        <span class="close-btn-next" (click)="goNext(4)"><i class="fa fa-chevron-right"
+                                data-toggle="tooltip" data-placement="bottom"
+                                title="Navigate to car variant"></i></span>
+                    </h3>
+                </div>
+                <div class="col-md-12 maincontainerdivstepscont">
+                    <div class="col-md-12 stepscarfueltypelistdiv">
+                        <ul>
+                            <li>
+                                <label>
+                                    <input type="radio" name="FuelID" value="7" formControlName="FuelID"
+                                        (change)="goNext(4,$event,'CNG')">
+                                    <a data-toggle="tooltip" data-placement="bottom" title="CNG">CNG<span><i
+                                                class="fa fa-angle-right"></i></span></a>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Car Variant -->
+            <div id="homestep4" class="formsearchwheretomaindiv" *ngIf="isShowVariant">
+                <div class="col-md-12">
+                    <h3 class="headingsearchhome innerstepheadtag">
+                        <span class="close-btn-prev" (click)="goNext(3)"><i class="fa fa-chevron-left"
+                                data-toggle="tooltip" data-placement="bottom"
+                                title="Navigate to Car Fule type"></i></span>
+                        Select Car Variant
+                        <span class="close-btn-next" (click)="goNext(5)"><i class="fa fa-chevron-right"
+                                data-toggle="tooltip" data-placement="bottom"
+                                title="Navigate to Registration Year"></i></span>
+                    </h3>
+                </div>
+                <div class="col-md-12 maincontainerdivstepscont">
+                    <div class="col-md-12 stepscarfueltypelistdiv autoheightstepsmin">
+                        <ul>
+                            <li *ngFor="let variant of variantList">
+                                <label>
+                                    <input type="radio" name="VariantID" [value]="variant.VariantID"
+                                        formControlName="VariantID" (change)="goNext(5,$event,variant)">
+                                    <a data-toggle="tooltip" data-placement="bottom" title="XL6">{{variant.VariantName}}
+                                        <span><i class="fa fa-angle-right"></i></span></a>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Car Registration Year -->
+            <div id="homestep5" class="formsearchwheretomaindiv" *ngIf="isShowRegistrationYear">
+                <div class="col-md-12">
+                    <h3 class="headingsearchhome innerstepheadtag">
+                        <span class="close-btn-prev" (click)="goNext(4)"><i class="fa fa-chevron-left"
+                                data-toggle="tooltip" data-placement="bottom"
+                                title="Navigate to car variant"></i></span>
+                        Select Car Registration Year
+                        <span class="close-btn-next" (click)="goNext(6)"><i class="fa fa-chevron-right"
+                                data-toggle="tooltip" data-placement="bottom" title="Navigate to city & Rto"></i></span>
+                    </h3>
+                </div>
+                <div class="col-md-12 maincontainerdivstepscont">
+                    <div class="col-md-12 stepscarregistrationlistdiv">
+                        <ul>
+                            <li>
+                                <label>
+                                    <input type="radio" name="RegistrationDate" value="new"
+                                        (change)="goNext(6,$event)">
+                                    <a>Brand New Car <span><i class="fa fa-angle-right"></i></span></a>
+                                </label></li>
+                            <li *ngFor="let year of yearList">
+                                <label>
+                                    <input type="radio" name="RegistrationDate" [value]="year"
+                                        (change)="goNext(6,$event)">
+                                    <a>{{year}} <span><i class="fa fa-angle-right"></i></span></a>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- City & RTO -->
+            <div id="homestep6" class="formsearchwheretomaindiv" *ngIf="isShowRto">
+                <div class="col-md-12">
+                    <h3 class="headingsearchhome innerstepheadtag">
+                        <span class="close-btn-prev" (click)="goNext(5)"><i class="fa fa-chevron-left"
+                                data-toggle="tooltip" data-placement="bottom"
+                                title="Navigate to Registration Year"></i></span>
+                        Select City & RTO
+                        <span class="close-btn-next" (click)="goNext(7)"><i class="fa fa-chevron-right"
+                                data-toggle="tooltip" data-placement="bottom" title="Navigate to details"></i></span>
+                    </h3>
+                </div>
+                <div class="col-md-12 maincontainerdivstepscont">
+                    <div class="row">
+                        <div class="col-md-12 stepcontrtocitymaindiv">
+                            <p>Where is your car registered?</p>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect01"><i
+                                            class="fa fa-search"></i></label>
+                                </div>
+                                <input type="text" class="form-control" formControlName="rtoSearchText"
+                                    (keyup)="filterRTOList()">
+                                <div class="auto-complete" *ngIf="isShowAutoComplete">
+                                    <ul class="list-group" *ngFor="let rto of rtoFilterList">
+                                        <li class="list-group-item" (click)="updateRTO(rto)">{{rto.FullRtoCode}}
+                                            {{rto.RTOName}}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 stepcontrtocitymaindiv">
+                            <p>When it was registered?</p>
+                            <div class="input-group">
+                                <input type="date" class="form-control" formControlName="RegistrationDate">
+                            </div>
+                        </div>
+                        <div class="col-md-6 stepcontrtocitymaindiv">
+                            <p>Previous Policy Expire</p>
+                            <div class="input-group">
+                                <input type="date" class="form-control" formControlName="PreviousPolicyExpiryDate">
+                            </div>
+                        </div>
+                        <div class="col-md-6 stepcontrtocitymaindiv">
+                            <p>Claim Taken Last Year</p>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="yes" name="IsClaimMade" class="custom-control-input"
+                                    formControlName="IsClaimMade" value="true">
+                                <label class="custom-control-label" data-toggle="tooltip" data-placement="bottom"
+                                    title="Custom" for="yes">Yes</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="no" name="IsClaimMade" class="custom-control-input"
+                                    formControlName="IsClaimMade" value="false">
+                                <label class="custom-control-label" data-toggle="tooltip" data-placement="bottom"
+                                    title="Custom" for="no">No</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 stepcontrtocitymaindiv">
+                            <p>Previuos No Claim Bonus</p>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect01"><i
+                                            class="fa fa-search"></i></label>
+                                </div>
+                                <select class="custom-select myinputdesign" id="inputGroupSelect01"
+                                    formControlName="NCBDiscount">
+                                    <option selected>Choose...</option>
+                                    <option value="1">0%</option>
+                                    <option value="2">20%</option>
+                                    <option value="3">35%</option>
+                                    <option value="3">45%</option>
+                                    <option value="3">50%</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary m-auto" data-toggle="tooltip" data-placement="bottom"
+                        title="Continue" (click)="goNext(7)">Continue <i class="fa fa-angle-right"></i></button>
+                </div>
+
+            </div>
+
+            <!-- Fill Your Details -->
+            <div id="homestep7" class="formsearchwheretomaindiv" *ngIf="isShowDetails">
+                <div class="col-md-12">
+                    <h3 class="headingsearchhome innerstepheadtag">
+                        <span class="close-btn-prev" (click)="goNext(6)"><i class="fa fa-chevron-left"
+                                data-toggle="tooltip" data-placement="bottom" title="Navidate to city & Rto"></i></span>
+                        Please Fill Your Details
+                        <!-- <span class="close-btn-next"><i class="fa fa-chevron-right"></i></span> -->
+                    </h3>
+                </div>
+                <div class="col-md-12 maincontainerdivstepscont">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="mylable">Full Name</label>
+                            <input type="text" class="form-control myinputdesign" id="name"
+                                placeholder="Enter Full Name" formControlName="CustName">
+                        </div>
+                        <div class="form-group">
+                            <label class="mylable">Email</label>
+                            <input type="email" class="form-control myinputdesign" id="email" placeholder="Enter Email"
+                                formControlName="Email">
+                        </div>
+                        <div class="form-group">
+                            <label class="mylable">Mobile No.</label>
+                            <input type="text" class="form-control myinputdesign" id="number" placeholder="Enter Number"
+                                formControlName="Mobile">
+                        </div>
+                        <div class="form-group buttongrupsteps">
+                            <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="bottom"
+                                title="Continue" (click)="searchMotor()">Continue</button>
+                        </div>
+                        <p class="ptagcontstepslinks">By clicking on "Continue", you agree to our <a href="#">Privacy
+                                Policy</a> & <a href="#">Terms of Use</a></p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-4 leftconthomebanner">
+        <!-- <img src="assets/img/banner1.jpg" alt="" /> -->
+        <div class="col-12 col-md-12">
+            <div class="slider leftsidebannerslider">
+                <div>
+                    <img src="assets/img/ad1.jpg" alt="" />
+                </div>
+                <div>
+                    <img src="assets/img/ad2.jpg" alt="" />
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <marquee class="marqueebannerhome">
+                <p>Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem
+                    ipsum dolor!</p>
+            </marquee>
+        </div>
+    </div>
+    <div class="col-md-1"></div>
+</div>

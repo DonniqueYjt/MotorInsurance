@@ -1,0 +1,188 @@
+<h3 class="headingbookingtabmaincontdiv"><span>Proposal Detail</span></h3>
+<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+  <div class="row">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 listsummeryformmaindivleftside">
+      <div class="row mg0">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 pd5 mainfieldsetdivcontainer">
+          <fieldset>
+            <legend>Personal Details</legend>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 maininfocoldivproposaldiv">
+              <div class="row mg0">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 listinfosummarydetail">
+                    <p>Full Name</p>
+                    <h3>{{proposalData.owner.CustomerName}} {{proposalData.owner.LastName}}</h3>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 listinfosummarydetail">
+                    <p>Dob</p>
+                    <h3>{{proposalData.owner.DOB}}</h3>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 listinfosummarydetail">
+                    <p>Address 1</p>
+                    <h3>{{proposalData.address.Address1}}</h3>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 listinfosummarydetail">
+                    <p>Address 2</p>
+                    <h3>{{proposalData.address.Address2}}</h3>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 listinfosummarydetail">
+                    <p>Address 3</p>
+                    <h3>{{proposalData.address.Address3}}</h3>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 listinfosummarydetail">
+                    <p>Contact No</p>
+                    <h3>{{proposalData.owner.MobileNo}}</h3>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 listinfosummarydetail">
+                    <p>Email ID</p>
+                    <h3>{{proposalData.owner.EmailId}}</h3>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 listinfosummarydetail">
+                    <p>City</p>
+                    <h3>{{proposalData.address.CityId}}</h3>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 listinfosummarydetail">
+                    <p>State</p>
+                    <h3>{{proposalData.address.StateId}}</h3>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 listinfosummarydetail">
+                    <p>Pincode</p>
+                    <h3>{{proposalData.address.PostCode}}</h3>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 listinfosummarydetail">
+                    <p>Nominee Name</p>
+                    <h3>{{proposalData.nominee.NomineeName}}</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 pd5 mainfieldsetdivcontainer">
+          <fieldset>
+            <legend>Vehicle Details</legend>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 maininfocoldivproposaldiv">
+              <div class="row mg0">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 listinfosummarydetail">
+                    <p>Manufacturer</p>
+                    <h3>{{searchObject.manufacturer.Manufacturername}}</h3>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 listinfosummarydetail">
+                    <p>Vehicle</p>
+                    <h3>{{searchObject.model.VehicleName}}</h3>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 listinfosummarydetail">
+                    <p>Variant</p>
+                    <h3>{{searchObject.variant.VariantName}}</h3>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 listinfosummarydetail">
+                    <p>Fuel</p>
+                    <h3>{{searchObject.fuelType}}</h3>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 listinfosummarydetail">
+                    <p>Cubic Capacity</p>
+                    <h3>{{searchObject.variant.VehicleCC}}</h3>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 listinfosummarydetail">
+                    <p>Registration no</p>
+                    <h3>{{proposalData.vehicle.RegistrationNumber}}</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 pd5 mainfieldsetdivcontainer">
+          <fieldset>
+            <legend>Policy Details</legend>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 maininfocoldivproposaldiv">
+              <div class="row mg0">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 listinfosummarydetail">
+                    <p>Policy Type</p>
+                    <h3>Renew</h3>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 listinfosummarydetail">
+                    <p>Chesis No</p>
+                    <h3>{{proposalData.vehicle.ChasisNumber}}</h3>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 listinfosummarydetail">
+                    <p>Premium</p>
+                    <h3>{{selectedQuote.PackagePremium}}</h3>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 listinfosummarydetail">
+                    <p>Fuel</p>
+                    <h3>{{searchObject.fuelType}}</h3>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 listinfosummarydetail">
+                    <p>Policy For</p>
+                    <h3>{{searchObject.vehicleType}}</h3>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 listinfosummarydetail">
+                    <p>Service Tax</p>
+                    <h3>{{selectedQuote.ServiceTax}}</h3>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 listinfosummarydetail">
+                    <p>IDV</p>
+                    <h3>{{selectedQuote.SupplierIdv}}</h3>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 pd5">
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 listinfosummarydetail">
+                    <p>Engine No</p>
+                    <h3>{{proposalData.vehicle.EngineNumber}}</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
