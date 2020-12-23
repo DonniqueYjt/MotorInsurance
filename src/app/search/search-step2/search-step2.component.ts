@@ -30,6 +30,7 @@ export class SearchStep2Component implements OnInit {
   isShowAutoComplete: boolean = false;
 
   searchForm: FormGroup;
+  maxDate: string = this.datePipe.transform(new Date(), 'yyyy-MM-dd');
 
   vehicleType: number;
   coverType: number;
@@ -52,7 +53,7 @@ export class SearchStep2Component implements OnInit {
       VariantID: [''],
       RegistrationRTOCode: [''],
       Mobile: [''],
-      PreviousPolicyExpiryDate: [''],
+      PreviousPolicyExpiryDate: [this.datePipe.transform(new Date(), 'yyyy-MM-dd')],
       RegistrationDate: [''],
       ManufacturingDate: [''],
       VehicleType: [this.vehicleType],
@@ -61,7 +62,7 @@ export class SearchStep2Component implements OnInit {
       ModelId: [''],
       VehicleCode: [''],
       CubicCapacity: [''],
-      IsClaimMade: [''],
+      IsClaimMade: [],
       NCBDiscount: [''],
       Email: [''],
       CustName: [''],
@@ -117,8 +118,8 @@ export class SearchStep2Component implements OnInit {
       case 2:
         this.isShowModel = true;
         this.searchService.searchObject.manufacturer = (data as Manufacturer);
-        if (event.target.checked)
-          this.getVehicleList(this.searchForm.value.MakeID);
+        //if (event.target.checked)
+        this.getVehicleList(this.searchForm.value.MakeID);
         break;
       case 3:
         this.isShowFuelType = true;
@@ -127,28 +128,28 @@ export class SearchStep2Component implements OnInit {
       case 4:
         this.isShowVariant = true;
         this.searchService.searchObject.fuelType = data;
-        if (event.target.checked)
-          this.getVariantList(this.searchForm.value.ModelId);
+        // if (event.target.checked)
+        this.getVariantList(this.searchForm.value.ModelId);
         break;
       case 5:
         this.isShowRegistrationYear = true;
         this.searchService.searchObject.variant = (data as Variant);
         this.searchForm.patchValue({
-          CubicCapacity: event.VehicleCC,
-          VehicleCode: event.MasterVehicleCode
+          CubicCapacity: data.VehicleCC,
+          VehicleCode: data.MasterVehicleCode
         });
         break;
       case 6:
         this.isShowRto = true;
-        if (event.target.checked) {
-          if (event.target.value == 'new')
-            event.target.value = new Date().getFullYear();
-          this.searchService.searchObject.manufacturerYear = event.target.value;
-          this.searchForm.patchValue({
-            RegistrationDate: this.datePipe.transform(new Date('01/01/' + event.target.value), 'yyyy-MM-dd'),
-            ManufacturingDate: this.datePipe.transform(new Date('01/01/' + event.target.value), 'yyyy-MM-dd')
-          });
-        }
+        // if (event.target.checked) {
+        if (event.target.value == 'new')
+          event.target.value = new Date().getFullYear();
+        this.searchService.searchObject.manufacturerYear = event.target.value;
+        this.searchForm.patchValue({
+          RegistrationDate: this.datePipe.transform(new Date('01-01-' + event.target.value), 'yyyy-MM-dd'),
+          ManufacturingDate: this.datePipe.transform(new Date('01-01-' + event.target.value), 'yyyy-MM-dd')
+        });
+        //}
         break;
       case 7:
         this.isShowDetails = true;
@@ -182,9 +183,9 @@ export class SearchStep2Component implements OnInit {
         ModelId: this.searchForm.value.ModelId,
         NCBDiscount: this.searchForm.value.NCBDiscount,
         OwnedBy: this.searchForm.value.OwnedBy,
-        PreviousPolicyExpiryDate: this.searchForm.value.PreviousPolicyExpiryDate,
+        PreviousPolicyExpiryDate: this.datePipe.transform(new Date(this.searchForm.value.PreviousPolicyExpiryDate), 'yyyy/MM/dd'),
         Product: this.searchForm.value.Product,
-        RegistrationDate: this.searchForm.value.RegistrationDate,
+        RegistrationDate: this.datePipe.transform(new Date(this.searchForm.value.RegistrationDate), 'yyyy-MM-dd'),
         RegistrationNumber: this.searchForm.value.RegistrationNumber,
         RegistrationRTOCode: this.searchForm.value.RegistrationRTOCode,
         TypeOfPolicy: this.searchForm.value.TypeOfPolicy,

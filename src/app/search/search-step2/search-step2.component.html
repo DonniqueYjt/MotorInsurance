@@ -107,9 +107,25 @@
                         <ul>
                             <li>
                                 <label>
-                                    <input type="radio" name="FuelID" value="7" formControlName="FuelID"
+                                    <input type="radio" name="FuelID" value="3" formControlName="FuelID"
                                         (change)="goNext(4,$event,'CNG')">
                                     <a data-toggle="tooltip" data-placement="bottom" title="CNG">CNG<span><i
+                                                class="fa fa-angle-right"></i></span></a>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="FuelID" value="4" formControlName="FuelID"
+                                        (change)="goNext(4,$event,'Diesel')">
+                                    <a data-toggle="tooltip" data-placement="bottom" title="Diesel">Diesel<span><i
+                                                class="fa fa-angle-right"></i></span></a>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="FuelID" value="7" formControlName="FuelID"
+                                        (change)="goNext(4,$event,'Petrol')">
+                                    <a data-toggle="tooltip" data-placement="bottom" title="Petrol">Petrol<span><i
                                                 class="fa fa-angle-right"></i></span></a>
                                 </label>
                             </li>
@@ -164,10 +180,10 @@
                         <ul>
                             <li>
                                 <label>
-                                    <input type="radio" name="RegistrationDate" value="new"
-                                        (change)="goNext(6,$event)">
+                                    <input type="radio" name="RegistrationDate" value="new" (change)="goNext(6,$event)">
                                     <a>Brand New Car <span><i class="fa fa-angle-right"></i></span></a>
-                                </label></li>
+                                </label>
+                            </li>
                             <li *ngFor="let year of yearList">
                                 <label>
                                     <input type="radio" name="RegistrationDate" [value]="year"
@@ -220,7 +236,8 @@
                         <div class="col-md-6 stepcontrtocitymaindiv">
                             <p>Previous Policy Expire</p>
                             <div class="input-group">
-                                <input type="date" class="form-control" formControlName="PreviousPolicyExpiryDate">
+                                <input type="date" class="form-control" formControlName="PreviousPolicyExpiryDate"
+                                    [max]="maxDate">
                             </div>
                         </div>
                         <div class="col-md-6 stepcontrtocitymaindiv">
@@ -238,7 +255,8 @@
                                     title="Custom" for="no">No</label>
                             </div>
                         </div>
-                        <div class="col-md-6 stepcontrtocitymaindiv">
+                        <div class="col-md-6 stepcontrtocitymaindiv"
+                            *ngIf="searchForm.controls['IsClaimMade'].value=='false'">
                             <p>Previuos No Claim Bonus</p>
                             <div class="input-group">
                                 <div class="input-group-prepend">
@@ -246,13 +264,12 @@
                                             class="fa fa-search"></i></label>
                                 </div>
                                 <select class="custom-select myinputdesign" id="inputGroupSelect01"
-                                    formControlName="NCBDiscount">
-                                    <option selected>Choose...</option>
-                                    <option value="1">0%</option>
-                                    <option value="2">20%</option>
-                                    <option value="3">35%</option>
-                                    <option value="3">45%</option>
-                                    <option value="3">50%</option>
+                                    formControlName="NCBDiscount" placeholder="Choose">
+                                    <option value="0">0%</option>
+                                    <option value="20">20%</option>
+                                    <option value="35">35%</option>
+                                    <option value="45">45%</option>
+                                    <option value="50">50%</option>
                                 </select>
                             </div>
                         </div>
