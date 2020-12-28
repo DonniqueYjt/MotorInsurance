@@ -32,7 +32,9 @@
                                         formControlName="MakeID" (change)="goNext(2,$event,manufacturer)">
                                     <a data-toggle="tooltip" data-placement="bottom" class="radio"
                                         [attr.title]="manufacturer.Manufacturername">
-                                        <img class="carlogo1img" src="assets/img/car-logo/car-logo1.png" alt="" />
+                                        <img class="carlogo1img"
+                                            [src]="'assets/img/car-logo/logo'+manufacturer.ManufacturerID+'.png'"
+                                            alt="" />
                                         <p>{{manufacturer.Manufacturername}}</p>
                                     </a>
                                 </label>

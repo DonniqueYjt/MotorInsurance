@@ -2448,7 +2448,7 @@ legend {
     filter: grayscale(0%);
 }
 .stepscarlogolistdiv ul li a img.carlogo1img {
-    width: 90%;
+    width: auto;
     padding-top: 12px;
 }
 .stepscarlogolistdiv ul li a img.carlogo2img {
