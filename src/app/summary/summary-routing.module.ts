@@ -9,7 +9,7 @@ import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.compo
 
 const routes: Routes = [
   {
-    path: '', component: SummaryComponent, redirectTo: '/summary/owner',
+    path: '', component: SummaryComponent,
     children: [
       { path: 'owner', component: OwnerDetailsComponent },
       { path: 'address', component: AddressDetailsComponent },

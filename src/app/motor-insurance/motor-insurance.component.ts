@@ -76,7 +76,7 @@ export class MotorInsuranceComponent implements OnInit {
   bookNow(quote: Quotes) {
     this.motorService.selectedQuote = quote;
     this.motorService.savePlan(this.searchEnquiryId, this.motorService.selectedQuote.PlanId).subscribe(res => {
-      this.router.navigate(['/summary'], { queryParams: { enquiryId: this.searchEnquiryId } });
+      this.router.navigate(['/summary/owner'], { queryParams: { enquiryId: this.searchEnquiryId } });
     })
   }
   groupBy(array, f) {

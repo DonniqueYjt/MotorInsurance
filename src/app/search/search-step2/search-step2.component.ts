@@ -43,6 +43,11 @@ export class SearchStep2Component implements OnInit {
       this.vehicleType = this.router.getCurrentNavigation().extras.state.vehicleType;
       this.coverType = this.router.getCurrentNavigation().extras.state.coverType;
     }
+    if (sessionStorage.getItem('searchObject')) {
+      this.searchService.searchObject = JSON.parse(sessionStorage.getItem('searchObject'));
+      this.vehicleType = this.searchService.searchObject.vehicleType;
+      this.coverType = this.searchService.searchObject.coverType;
+    }
   }
 
   ngOnInit(): void {

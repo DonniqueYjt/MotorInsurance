@@ -43,10 +43,11 @@ export class SearchObject {
     manufacturer: Manufacturer;
     model: Vehicle;
     variant: Variant;
-    vehicleType: string;
+    vehicleType: number;
     manufacturerYear: number;
     rto:RTO;
     fuelType: string;
     mobile: number;
     email: string;
+    coverType:number;
 }
