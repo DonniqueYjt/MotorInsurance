@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SearchService } from '../search.service';
 import { Manufacturer, Vehicle, Variant, RTO } from 'src/app/models/search.model';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MotorInsuranceService } from 'src/app/services/motor-insurance.service';
 import { InsertQuoteRequest } from 'src/app/models/request/insert-quotes-request.model';
 import { Router } from '@angular/router';
@@ -35,7 +35,7 @@ export class SearchStep2Component implements OnInit {
   vehicleType: number;
   coverType: number;
   yearList: number[] = [
-    2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001, 2000
+    2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001
   ]
 
   constructor(private searchService: SearchService, private datePipe: DatePipe, private router: Router, private _fb: FormBuilder, private motorService: MotorInsuranceService) {
@@ -57,7 +57,7 @@ export class SearchStep2Component implements OnInit {
       FuelID: [''],
       VariantID: [''],
       RegistrationRTOCode: [''],
-      Mobile: [''],
+      Mobile: ['', [Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
       PreviousPolicyExpiryDate: [this.datePipe.transform(new Date(), 'yyyy-MM-dd')],
       RegistrationDate: [''],
       ManufacturingDate: [''],
@@ -69,8 +69,8 @@ export class SearchStep2Component implements OnInit {
       CubicCapacity: [''],
       IsClaimMade: [],
       NCBDiscount: [''],
-      Email: [''],
-      CustName: [''],
+      Email: ['', [Validators.required, Validators.email]],
+      CustName: ['', Validators.required],
       RegistrationNumber: [''],
       OwnedBy: ['1'],
       searchTextManufacture: [''],
@@ -200,6 +200,7 @@ export class SearchStep2Component implements OnInit {
       }
       this.motorService.searchMotorInsurance(request).subscribe(res => {
         sessionStorage.setItem('searchObject', JSON.stringify(this.searchService.searchObject))
+        sessionStorage.setItem('searchRequest', JSON.stringify(request))
         if (res) {
           this.router.navigate(['/motor-insurance'], { queryParams: { enquiryId: res } });
         }

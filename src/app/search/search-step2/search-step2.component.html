@@ -183,7 +183,7 @@
                             <li>
                                 <label>
                                     <input type="radio" name="RegistrationDate" value="new" (change)="goNext(6,$event)">
-                                    <a>Brand New Car <span><i class="fa fa-angle-right"></i></span></a>
+                                    <a>Brand New Car 2021 <span><i class="fa fa-angle-right"></i></span></a>
                                 </label>
                             </li>
                             <li *ngFor="let year of yearList">
@@ -238,8 +238,7 @@
                         <div class="col-md-6 stepcontrtocitymaindiv">
                             <p>Previous Policy Expire</p>
                             <div class="input-group">
-                                <input type="date" class="form-control" formControlName="PreviousPolicyExpiryDate"
-                                    >
+                                <input type="date" class="form-control" formControlName="PreviousPolicyExpiryDate">
                             </div>
                         </div>
                         <div class="col-md-6 stepcontrtocitymaindiv">
@@ -298,16 +297,30 @@
                             <label class="mylable">Full Name</label>
                             <input type="text" class="form-control myinputdesign" id="name"
                                 placeholder="Enter Full Name" formControlName="CustName">
+                            <div *ngIf="searchForm.controls.CustName.touched && searchForm.controls.CustName.invalid"
+                                class="alert alert-danger">
+                                <div *ngIf="searchForm.controls.CustName.errors.required">First Name is required.</div>
+                            </div>
                         </div>
                         <div class="form-group">
                             <label class="mylable">Email</label>
                             <input type="email" class="form-control myinputdesign" id="email" placeholder="Enter Email"
                                 formControlName="Email">
+                            <div *ngIf="searchForm.controls.Email.touched && searchForm.controls.Email.invalid"
+                                class="alert alert-danger">
+                                <div *ngIf="searchForm.controls.Email.errors.required">Email is required.</div>
+                                <div *ngIf="searchForm.controls.Email.errors.email">Enter valid email.</div>
+                            </div>
                         </div>
                         <div class="form-group">
                             <label class="mylable">Mobile No.</label>
                             <input type="text" class="form-control myinputdesign" id="number" placeholder="Enter Number"
                                 formControlName="Mobile">
+                            <div *ngIf="searchForm.controls.Mobile.touched && searchForm.controls.Mobile.invalid"
+                                class="alert alert-danger">
+                                <div *ngIf="searchForm.controls.Mobile.errors.required">Mobile number is required.</div>
+                                <div *ngIf="searchForm.controls.Mobile.errors.pattern">Enter valid mobile number.</div>
+                            </div>
                         </div>
                         <div class="form-group buttongrupsteps">
                             <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="bottom"
